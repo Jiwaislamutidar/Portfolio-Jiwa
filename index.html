@@ -341,7 +341,7 @@
                             <h5 class="fw-bold text-light mb-1">Himpunan Mahasiswa Teknik Informatika (HIMTIF)</h5>
                             <span class="text-primary fw-bold">1 Tahun</span>
                         </div>
-                        <p class="text-muted italic mb-2">Kepala Department Ristek (Pengembang Website HIMTIF)</p>
+                        <p class="text-muted italic mb-2">- Kepala Department Ristek (Pengembang Website HIMTIF)</p>
                     </div>
                 </div>
             </div>
@@ -375,80 +375,203 @@
 
 <section id="sertificate" class="py-5 section-divider">
     <div class="container">
-        <h2 class="text-center mb-5 fw-bold">My <span class="text-primary">Certificates</span></h2>
+        <h2 class="text-center mb-4 fw-bold" data-aos="fade-up" data-aos-duration="1000">My <span class="text-primary">Certificates</span></h2>
         
-        <div class="row g-4">
+        <ul class="nav nav-pills justify-content-center mb-5 gap-2" id="certTab" role="tablist" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active rounded-pill px-4" id="learning-tab" data-bs-toggle="tab" data-bs-target="#learning" type="button" role="tab" aria-controls="learning" aria-selected="true">
+                    <i class="bi bi-book-half me-2"></i>Course & Learning
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link rounded-pill px-4" id="activity-tab" data-bs-toggle="tab" data-bs-target="#activity" type="button" role="tab" aria-controls="activity" aria-selected="false">
+                    <i class="bi bi-people-fill me-2"></i>Activity & Organization
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="certTabContent">
             
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="card glass-card h-100">
-                    <img src="images/eceset.png" class="card-img-top p-2" alt="Sertifikat">
-                    <div class="card-body text-center">
-                        <h6 class="card-title fw-bold">E-Certificate</h6>
-                        <button class="btn btn-sm btn-outline-primary mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/eceset.png">View</button>
+            <div class="tab-pane fade show active" id="learning" role="tabpanel" aria-labelledby="learning-tab">
+                <div class="row g-3 g-md-4">
+                    
+                    <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="1000">
+                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
+                            <div>
+                                <div class="project-img-wrapper">
+                                    <img src="images/eceset.png" alt="Sertifikat">
+                                </div>
+                                <h6 class="fw-bold mb-1 fs-6 text-white">Eceset Campus Security Day</h6>
+                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">Eset</p>
+                            </div>
+                                <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/eceset.png">
+                                    <i class="bi bi-eye me-1"></i> Credential
+                                </button>
+                        </div>
                     </div>
+
+                    <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1000">
+                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
+                            <div>
+                                <div class="project-img-wrapper">
+                                    <img src="images/perpus.jpg" alt="Sertifikat">
+                                </div>
+                                <h6 class="fw-bold mb-1 fs-6 text-white">Membangun Aplikasi Perpustakaan</h6>
+                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">Workshop Universitas Pamulang</p>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/perpus.jpg">
+                                 <i class="bi bi-eye me-1"></i> Credential
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1000">
+                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
+                            <div>
+                                <div class="project-img-wrapper">
+                                    <img src="images/sertif2.jpg" alt="Sertifikat">
+                                </div>
+                                <h6 class="fw-bold mb-1 fs-6 text-white">Class Pemrograman C++ Batch 6</h6>
+                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">Dilesin</p>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/sertif2.jpg">
+                                 <i class="bi bi-eye me-1"></i> Credential
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1000">
+                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
+                            <div>
+                                <div class="project-img-wrapper">
+                                    <img src="images/sertifcplusplus.jpg" alt="Sertifikat">
+                                </div>
+                                <h6 class="fw-bold mb-1 fs-6 text-white">Class Pemrograman C++ Batch 5</h6>
+                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">Dilesin</p>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/sertifcplusplus.jpg">
+                                <i class="bi bi-eye me-1"></i> Credential
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1000">
+                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
+                            <div>
+                                <div class="project-img-wrapper">
+                                    <img src="images/ssemt2.jpg" alt="Sertifikat">
+                                </div>
+                                <h6 class="fw-bold mb-1 fs-6 text-white">Masa Depan Web Development</h6>
+                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">Seminar Universitas Pamulang</p>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/ssemt2.jpg">
+                                <i class="bi bi-eye me-1"></i> Credential
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1000">
+                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
+                            <div>
+                                <div class="project-img-wrapper">
+                                    <img src="images/workshopsemt1.jpg" alt="Sertifikat">
+                                </div>
+                                <h6 class="fw-bold mb-1 fs-6 text-white">AI untuk pemula dan solusi keamanan siber</h6>
+                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">Workshop Universitas Pamulang</p>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/workshopsemt1.jpg">
+                                <i class="bi bi-eye me-1"></i> Credential
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1000">
+                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
+                            <div>
+                                <div class="project-img-wrapper">
+                                    <img src="images/sem4.png" alt="Sertifikat">
+                                </div>
+                                <h6 class="fw-bold mb-1 fs-6 text-white">Empowering Century Digital Talent</h6>
+                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">Seminar Universitas Pamulang</p>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/sem4.png">
+                                 <i class="bi bi-eye me-1"></i> Credential
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="card glass-card h-100">
-                    <img src="images/perpus.jpg" class="card-img-top p-2" alt="Sertifikat">
-                    <div class="card-body text-center">
-                        <h6 class="card-title fw-bold">Library Course</h6>
-                        <button class="btn btn-sm btn-outline-primary mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/perpus.jpg">View</button>
+            <div class="tab-pane fade" id="activity" role="tabpanel" aria-labelledby="activity-tab">
+                <div class="row g-3 g-md-4">
+                    
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
+                            <div>
+                                <div class="project-img-wrapper">
+                                    <img src="images/hackaton 2025.png" alt="Sertifikat">
+                                </div>
+                                <h6 class="fw-bold mb-1 fs-6 text-white">Panitia Hackaton 2025</h6>
+                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">HIMTIF Universitas Pamulang</p>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/sertif1.jpg">
+                                <i class="bi bi-eye me-1"></i> Credential
+                            </button>
+                        </div>
                     </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
+                            <div>
+                                <div class="project-img-wrapper">
+                                    <img src="images/rudistif 2025.png" alt="Sertifikat">
+                                </div>
+                                <h6 class="fw-bold mb-1 fs-6 text-white">Panitia Ruang Diskusi HIMTIF 2025</h6>
+                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">HIMTIF Universitas Pamulang</p>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/rudistif 2025.png">
+                                 <i class="bi bi-eye me-1"></i> Credential
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
+                            <div>
+                                <div class="project-img-wrapper">
+                                    <img src="images/peserta rudistif.png" alt="Sertifikat">
+                                </div>
+                                <h6 class="fw-bold mb-1 fs-6 text-white">Peserta Ruang Diskusi HIMTIF 2024</h6>
+                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">HIMTIF Universitas Pamulang</p>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/peserta rudistif.png">
+                                <i class="bi bi-eye me-1"></i> Credential
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
+                            <div>
+                                <div class="project-img-wrapper">
+                                    <img src="images/DNL.png" alt="Sertifikat">
+                                </div>
+                                <h6 class="fw-bold mb-1 fs-6 text-white">Panitia DNL 2025</h6>
+                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">HIMTIF Universitas Pamulang</p>
+                            </div>
+                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/DNL.png">
+                                <i class="bi bi-eye me-1"></i> Credential
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="card glass-card h-100">
-                    <img src="images/sertif2.jpg" class="card-img-top p-2" alt="Sertifikat">
-                    <div class="card-body text-center">
-                        <h6 class="card-title fw-bold">E-Certificate</h6>
-                        <button class="btn btn-sm btn-outline-primary mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/sertif2.jpg">View</button>
-                    </div>
-                </div>
-            </div>
+        </div>
+    </div>
 
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="card glass-card h-100">
-                    <img src="images/sertifcplusplus.jpg" class="card-img-top p-2" alt="Sertifikat">
-                    <div class="card-body text-center">
-                        <h6 class="card-title fw-bold">E-Certificate</h6>
-                        <button class="btn btn-sm btn-outline-primary mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/sertifcplusplus.jpg">View</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="card glass-card h-100">
-                    <img src="images/sertifhackton.jpg" class="card-img-top p-2" alt="Sertifikat">
-                    <div class="card-body text-center">
-                        <h6 class="card-title fw-bold">E-Certificate</h6>
-                        <button class="btn btn-sm btn-outline-primary mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/sertifhackton.jpg">View</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="card glass-card h-100">
-                    <img src="images/ssemt2.jpg" class="card-img-top p-2" alt="Sertifikat">
-                    <div class="card-body text-center">
-                        <h6 class="card-title fw-bold">E-Certificate</h6>
-                        <button class="btn btn-sm btn-outline-primary mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/ssemt2.jpg">View</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="card glass-card h-100">
-                    <img src="images/workshopsemt1.jpg" class="card-img-top p-2" alt="Sertifikat">
-                    <div class="card-body text-center">
-                        <h6 class="card-title fw-bold">E-Certificate</h6>
-                        <button class="btn btn-sm btn-outline-primary mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/workshopsemt1.jpg">View</button>
-                    </div>
-                </div>
-            </div>
-        </div> </div>
 </section>
 
 <div class="modal fade" id="sertifModal" tabindex="-1" aria-hidden="true" >

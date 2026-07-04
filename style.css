@@ -599,3 +599,22 @@ html.lenis {
 .glass-card:hover .project-img-wrapper img {
     transform: scale(1.08);
 }
+
+.nav-pills .nav-link {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+    color: #8b5cf6;
+    background: rgba(139, 92, 246, 0.1);
+}
+
+.nav-pills .nav-link.active {
+    background: linear-gradient(90deg, #8b5cf6, #4f46e5) !important;
+    color: white !important;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+    border-color: transparent;
+}

@@ -1,4 +1,42 @@
 /* Smooth Scroll */
+:root {
+  --bg-main: #0b0d19;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --text-main: #f1f5f9;
+  --accent-color: #8b5cf6;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-style: none;
+}
+
+[data-theme="light"] {
+  --bg-main: #f4f5fc;
+  --bg-card: rgba(255, 255, 255, 0.75);
+  --text-main: #0f1123;
+  --accent-color: #5b46e5;
+  --border-color: rgba(91, 70, 229, 0.15);
+  --shadow-style: 0 8px 32px 0 rgba(31, 38, 135, 0.06);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.card, .certificate-card { 
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-style);
+  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.navbar {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-style);
+  transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
 html {
   scroll-behavior: smooth;
 }

@@ -25,6 +25,7 @@
     <meta name="description" content="Portofolio resmi Muhammad Jiwa Islamutidar, mahasiswa Teknik Informatika Universitas Pamulang. Menampilkan proyek web development, sertifikat, dan keahlian IT.">
     <meta name="keywords" content="Muhammad Jiwa Islamutidar, Portofolio Muhammad Jiwa Islamutidar, Web Developer, HIMTIF Unpam, Teknik Informatika">
     <title>Muhammad Jiwa Islamutidar | Mahasiswa Teknik Informatika</title>
+    <link rel="icon" type="image/png" href="images/Jw.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
@@ -98,6 +99,7 @@
             box-shadow: 0 10px 30px rgba(13, 110, 253, 0.2);
             border-color: #0d6efd;
         }
+
     </style>
 </head>
 <body class="dark-theme text-light" data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="100" tabindex="0">
@@ -168,44 +170,75 @@
 
 <section id="about" class="py-5 section-divider" data-aos="fade-up" data-aos-duration="1000">
     <div class="container">
-        <div class="row g-4 align-items-stretch">
-            <div class="col-md-4" data-aos="fade-up" data-aos-duration="800">
-                <div class="card p-4 text-center h-100 glass-card">
+        <!-- Menyatukan semuanya dalam 1 Glass Card -->
+        <div class="card p-4 p-md-5 glass-card overflow-hidden position-relative">
+            <!-- Dekorasi gradient opsional di dalam card -->
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.1), transparent 60%); z-index: 0;"></div>
+            
+            <div class="row g-4 g-lg-5 align-items-center position-relative" style="z-index: 1;">
+                
+                <!-- Bagian Kiri: Profil & CV (Compact di mobile, lebar di desktop) -->
+                <div class="col-12 col-lg-4 text-center border-end-lg pb-4 pb-lg-0" style="border-color: rgba(255,255,255,0.1) !important;">
                     <img src="images/pakebatik.jpg" 
-                         alt="Profile" 
-                         class="rounded-circle mb-3 border border-primary border-3 mx-auto d-block" 
-                         style="width: 120px; height: 120px; object-fit: cover;">
+                         alt="Profile Muhammad Jiwa Islamutidar" 
+                         class="rounded-circle mb-3 border border-primary border-3 shadow-primary mx-auto d-block" 
+                         style="width: 140px; height: 140px; object-fit: cover;">
                     
-                    <h5 class="fw-bold mb-0">Muhammad Jiwa Islamutidar</h5>
-                    <p class="text-primary mb-3">Full Stack Web Developer</p>
+                    <h4 class="fw-bold mb-1">Muhammad Jiwa Islamutidar</h4>
+                    <p class="text-primary mb-3 fw-semibold">Full Stack Web Developer</p>
                     
-                    <div class="d-flex justify-content-center gap-3 mb-3">
-                        <a href="https://github.com/mjiwa" class="text-light fs-5"><i class="bi bi-github"></i></a>
-                        <a href="https://www.linkedin.com/in/muhammad-jiwa-islamutidar" class="text-light fs-5"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://www.instagram.com/mjiwa_" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
+                    <div class="d-flex justify-content-center gap-3 mb-4">
+                        <a href="https://github.com/mjiwa" class="text-light fs-4"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/muhammad-jiwa-islamutidar" class="text-light fs-4"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.instagram.com/mjiwa_" class="text-light fs-4"><i class="bi bi-instagram"></i></a>
                     </div>
                     
-                    <div class="text-start small mt-3">
-                        <p><i class="bi bi-envelope-fill text-primary me-2"></i> mjiwaislamutidar@gmail.com</p>
-                        <p><i class="bi bi-geo-alt-fill text-primary me-2"></i> Tangerang, Indonesia</p>
-                    </div>
-                    
-                    <a href="images/cv baru.png" target="_blank" class="btn btn-primary w-100 mt-4 rounded-pill btn-glow">Lihat CV</a>
+                    <a href="images/CV - Muhammad Jiwa Islamutidar.pdf" target="_blank" class="btn btn-primary w-100 rounded-pill btn-glow shadow-sm">
+                        <i class="bi bi-file-earmark-person me-2"></i>Lihat CV
+                    </a>
                 </div>
-            </div>
 
-            <div class="col-md-8" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-                <div class="card p-5 h-100 glass-card d-flex flex-column justify-content-center">
+                <!-- Bagian Kanan: Teks Deskripsi & Kontak -->
+                <div class="col-12 col-lg-8 text-center text-lg-start">
                     <h2 class="fw-bold mb-4">
                         <span class="text-primary">About</span> Me
                     </h2>
-                    <p class="fs-5 lh-lg text-light">
-                        Hallo! Saya <strong>Jiwa</strong>, mahasiswa aktif Teknik Informatika di Universitas Pamulang. Saya memiliki minat besar di bidang Web Development dan Cyber Security.
-                    </p>
-                    <p class="fs-5 lh-lg text-secondary">
-                        Saat ini saya fokus pada pengembangan website menggunakan teknologi modern. Saya percaya bahwa teknologi yang dirancang dengan baik dapat memberikan dampak positif yang nyata bagi kehidupan.
-                    </p>
+                    <div class="fs-6 lh-lg mb-4">
+                        <p class="text-light">
+                            Hallo! Saya <strong>Jiwa</strong>, mahasiswa aktif Teknik Informatika. Saya memiliki minat besar di bidang <em>Web Development</em> dan <em>Cyber Security</em>. 
+                        </p>
+                        <p class="text-secondary">
+                            Saat ini saya fokus pada pengembangan website menggunakan teknologi modern. Membangun sistem yang interaktif, seperti platform penjaringan aspirasi untuk organisasi mahasiswa, mengajarkan saya bahwa teknologi yang dirancang dengan baik dapat mengoptimalkan budaya profesional dan memberikan dampak positif yang nyata.
+                        </p>
+                    </div>
+                    
+                    <!-- Info Kontak diletakkan rapi di bawah deskripsi -->
+                    <div class="row g-3 text-start small border-top pt-4 mt-2" style="border-color: rgba(255,255,255,0.1) !important;">
+                        <div class="col-12 col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary bg-opacity-10 p-2 rounded text-primary me-3">
+                                    <i class="bi bi-envelope-fill fs-5"></i>
+                                </div>
+                                <div>
+                                    <span class="text-muted d-block" style="font-size: 0.8rem;">Email</span>
+                                    <span class="fw-semibold text-light">mjiwaislamutidar@gmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div class="d-flex align-items-center mt-3 mt-sm-0">
+                                <div class="bg-primary bg-opacity-10 p-2 rounded text-primary me-3">
+                                    <i class="bi bi-geo-alt-fill fs-5"></i>
+                                </div>
+                                <div>
+                                    <span class="text-muted d-block" style="font-size: 0.8rem;">Location</span>
+                                    <span class="fw-semibold text-light">Tangerang, Indonesia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -382,7 +415,7 @@
         <div class="row justify-content-center g-3">
             
             <!-- CARD 1: Masuk ke kolom pertama -->
-            <div class="col-6">
+            <div class="col-12 col-md-6">
                 <div class="card glass-card p-4 border-primary h-100">
                     <div class="d-flex align-items-center mb-3">
                         <i class="bi bi-award-fill text-warning fs-1 me-3"></i>
@@ -392,7 +425,7 @@
                         </div>
                     </div>
                     <p class="text-light">
-                        Pencatatan resmi HKI untuk program komputer berjudul "Kost Nuansa" yang disahkan oleh Direktorat Jenderal Kekayaan Intelektual[cite: 1].
+                        Pencatatan resmi HKI untuk program komputer berjudul "Kost Nuansa" yang disahkan oleh Direktorat Jenderal Kekayaan Intelektual.
                     </p>
                     <a href="images/haki.pdf" target="_blank" class="btn btn-primary btn-sm rounded-pill mt-2">
                         <i class="bi bi-file-earmark-pdf me-1"></i> Lihat Dokumen Resmi
@@ -401,7 +434,7 @@
             </div>
 
             <!-- CARD 2: Masuk ke kolom kedua (Ganti mt-4 jadi h-100 agar tinggi card sejajar otomatis) -->
-            <div class="col-6">
+            <div class="col-12 col-md-6">
                 <div class="card glass-card p-4 border-primary h-100">
                     <div class="d-flex align-items-center mb-3">
                         <i class="bi bi-trophy-fill text-warning fs-1 me-3"></i>
@@ -707,10 +740,12 @@
 
         AOS.init({ 
             duration: 900, 
-            once: true,    
+            once: false,
+            mirror: true,    
             offset: 80,    
             easing: 'ease-out-cubic'
         });
+        
 
         const sertifModal = document.getElementById('sertifModal');
         if (sertifModal) {

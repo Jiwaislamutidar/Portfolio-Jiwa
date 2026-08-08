@@ -1,821 +1,568 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="id" data-theme="light">
 <head>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Muhammad Jiwa Islamutidar",
-  "url": "https://portfolio-jiwa.vercel.app/",
-  "image": "https://portfolio-jiwa.vercel.app/images/foto-profil.jpg",
-  "sameAs": [
-    "https://www.linkedin.com/in/username-kamu",
-    "https://github.com/Jiwa2",
-    "https://instagram.com/username-kamu"
-  ],
-  "jobTitle": "Informatics Engineering Student & Web Developer",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Universitas Pamulang"
-  }
-}
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portofolio resmi Muhammad Jiwa Islamutidar, mahasiswa Teknik Informatika Universitas Pamulang. Menampilkan proyek web development, sertifikat, dan keahlian IT.">
-    <meta name="keywords" content="Muhammad Jiwa Islamutidar, Portofolio Muhammad Jiwa Islamutidar, Web Developer, HIMTIF Unpam, Teknik Informatika">
-    <title>Muhammad Jiwa Islamutidar</title>
-    <link rel="icon" type="image/png" href="images/Jw.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">  
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            background-color: #1a191d; /* Fallback warna gelap */
-        }
-        .nav-link.active {
-            border-bottom: 3px solid #0d6efd;
-            color: #fff !important;
-        }
-        .hero-text {
-            animation: fadeInUp 1s ease-out;
-        }
-        .hero-img {
-            animation: fadeInRight 1.5s ease-out;
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInRight {
-            from { opacity: 0; transform: translateX(30px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        .marquee-container {
-            overflow: hidden;
-            position: relative;
-            width: 100%;
-        }
-        .marquee-content {
-            display: flex;
-            gap: 2rem;
-            animation: scroll-left 12s linear infinite;
-        }
-        .marquee-content.reverse {
-            animation: scroll-right 12s linear infinite;
-        }
-        .sertif-item {
-            width: 300px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
-        .sertif-item:hover {
-            transform: scale(1.05);
-        }
-        @keyframes scroll-left {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
-        }
-        @keyframes scroll-right {
-            0% { transform: translateX(-50%); }
-            100% { transform: translateX(0%); }
-        }
-        .card-hover {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 1rem;
-        }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(13, 110, 253, 0.2);
-            border-color: #0d6efd;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio resmi Muhammad Jiwa Islamutidar, mahasiswa Teknik Informatika Universitas Pamulang. Menampilkan proyek web development, sertifikat, dan keahlian IT.">
+  <meta name="keywords" content="Muhammad Jiwa Islamutidar, Portofolio Muhammad Jiwa Islamutidar, Web Developer, HIMTIF Unpam, Teknik Informatika">
+  <title>Muhammad Jiwa Islamutidar</title>
+  <link rel="icon" type="image/png" href="images/Jw.png">
 
-    </style>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-theme text-light" data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="100" tabindex="0">
-<div id="progress-bar"></div>
-    <nav id="navbar-example" class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand fs-3 ms-md-4" href="/"><strong>Jiwa</strong></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-md-4">
-                <li class="nav-item mx-2">
-                    <a class="nav-link fs-5" href="#hero">Hero <span class="plane-icon">✈</span></a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link fs-5" href="#about">About <span class="plane-icon">✈</span></a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link fs-5" href="#projects">Projects <span class="plane-icon">✈</span></a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link fs-5" href="#experience">Experience <span class="plane-icon">✈</span></a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link fs-5" href="#sertificate">Certificate <span class="plane-icon">✈</span></a>
-                </li>
-                <!-- TOMBOL UBAH TEMA
-                <button id="theme-toggle" class="btn border-0 p-2 ms-2">
-                <i id="theme-icon" class="bi bi-moon-stars-fill text-warning"></i>
-                </button>
-                -->
-            </ul>
-        </div>
-    </div>
-</nav>
+<body id="top">
 
-<section id="hero" class="min-vh-100 d-flex align-items-center position-relative overflow-hidden pt-5">
-    <div class="position-absolute top-50 start-50 translate-middle" 
-         style="width: 300px; height: 300px; background: #8b5cf6; filter: blur(120px); z-index: -1; opacity: 0.2; border-radius: 50%; pointer-events: none;">
-    </div>
+  <!-- ============ NAVBAR ============ -->
+  <header class="topnav">
+    <div class="container-lg">
+      <a class="brand" href="#top">Jiwa<span class="star">*</span></a>
 
-    <div class="container">
-        <div class="row align-items-center text-center text-md-start g-5">
-            <div class="col-md-6 hero-text" data-aos="fade-right" data-aos-duration="1000">
-                <span class="badge bg-primary bg-opacity-25 text-primary px-3 py-2 mb-3 rounded-pill">Available for Collaboration</span>
-                <h1 class="display-3 fw-bold mb-3">
-                    Hi, I'm <span class="text-gradient">Jiwa</span>
-                </h1>
-                <h2 id="typed-title" class="h3 fw-light text-secondary mb-4"></h2>
-               <p id="typed-text" class="lead text-muted mb-4 pe-md-5"></p>
-                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-md-start">
-                    <a href="#projects" class="btn btn-primary btn-lg px-4 shadow-primary btn-glow">Explore My Work</a>
-                    <a href="#about" class="btn btn-outline-light btn-lg px-4">About Me</a>
-                </div>
-            </div>
-            
-            <div class="col-md-6 text-center mt-5 mt-md-0" data-aos="fade-left" data-aos-duration="1000">
-            <div class="position-relative d-inline-block">
-                <div class="d-none d-md-block position-absolute top-0 start-0 w-100 h-100 border border-primary opacity-50 rounded-4" style="transform: translate(20px, 20px); z-index: -1;"></div>
-                
-                <img src="images/mukapakealmet.png" alt="Jiwa" class="img-fluid rounded-4 shadow-lg bg-dark" style="max-width: 250px; border: 2px solid rgba(255,255,255,0.1);">
-            </div>
-</div>
-        </div>
-    </div>
-</section>
+      <button class="toggler" id="navToggler" aria-label="Menu" aria-expanded="false">
+        <span class="toggler-icon">☰</span>
+      </button>
 
-<section id="about" class="py-5 section-divider" data-aos="fade-up" data-aos-duration="1000">
-    <div class="container">
-        <!-- Menyatukan semuanya dalam 1 Glass Card -->
-        <div class="card p-4 p-md-5 glass-card overflow-hidden position-relative">
-            <!-- Dekorasi gradient opsional di dalam card -->
-            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle at top right, rgba(139, 92, 246, 0.1), transparent 60%); z-index: 0;"></div>
-            
-            <div class="row g-4 g-lg-5 align-items-center position-relative" style="z-index: 1;">
-                
-                <!-- Bagian Kiri: Profil & CV (Compact di mobile, lebar di desktop) -->
-                <div class="col-12 col-lg-4 text-center border-end-lg pb-4 pb-lg-0" style="border-color: rgba(255,255,255,0.1) !important;">
-                    <img src="images/pakebatik.jpg" 
-                         alt="Profile Muhammad Jiwa Islamutidar" 
-                         class="rounded-circle mb-3 border border-primary border-3 shadow-primary mx-auto d-block" 
-                         style="width: 140px; height: 140px; object-fit: cover;">
-                    
-                    <h4 class="fw-bold mb-1">Muhammad Jiwa Islamutidar</h4>
-                    <p class="text-primary mb-3 fw-semibold">Full Stack Web Developer</p>
-                    
-                    <div class="d-flex justify-content-center gap-3 mb-4">
-                        <a href="https://github.com/mjiwa" class="text-light fs-4"><i class="bi bi-github"></i></a>
-                        <a href="https://www.linkedin.com/in/muhammad-jiwa-islamutidar" class="text-light fs-4"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://www.instagram.com/mjiwa_" class="text-light fs-4"><i class="bi bi-instagram"></i></a>
-                    </div>
-                    
-                    <a href="images/CV - Muhammad Jiwa Islamutidar.pdf" target="_blank" class="btn btn-primary w-100 rounded-pill btn-glow shadow-sm">
-                        <i class="bi bi-file-earmark-person me-2"></i>Lihat CV
-                    </a>
-                </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema" title="Ganti tema">
+        <span class="theme-icon">☀</span>
+      </button>
 
-                <!-- Bagian Kanan: Teks Deskripsi & Kontak -->
-                <div class="col-12 col-lg-8 text-center text-lg-start">
-                    <h2 class="fw-bold mb-4">
-                        <span class="text-primary">About</span> Me
-                    </h2>
-                    <div class="fs-6 lh-lg mb-4">
-                        <p class="text-light">
-                            Hallo! Saya <strong>Jiwa</strong>, mahasiswa aktif Teknik Informatika. Saya memiliki minat besar di bidang <em>Web Development</em> dan <em>Cyber Security</em>. 
-                        </p>
-                        <p class="text-secondary">
-                            Saat ini saya fokus pada pengembangan website menggunakan teknologi modern. Membangun sistem yang interaktif, seperti platform penjaringan aspirasi untuk organisasi mahasiswa, mengajarkan saya bahwa teknologi yang dirancang dengan baik dapat mengoptimalkan budaya profesional dan memberikan dampak positif yang nyata.
-                        </p>
-                    </div>
-                    
-                    <!-- Info Kontak diletakkan rapi di bawah deskripsi -->
-                    <div class="row g-3 text-start small border-top pt-4 mt-2" style="border-color: rgba(255,255,255,0.1) !important;">
-                        <div class="col-12 col-sm-6">
-                            <div class="d-flex align-items-center">
-                                <div class="bg-primary bg-opacity-10 p-2 rounded text-primary me-3">
-                                    <i class="bi bi-envelope-fill fs-5"></i>
-                                </div>
-                                <div>
-                                    <span class="text-muted d-block" style="font-size: 0.8rem;">Email</span>
-                                    <span class="fw-semibold text-light">mjiwaislamutidar@gmail.com</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <div class="d-flex align-items-center mt-3 mt-sm-0">
-                                <div class="bg-primary bg-opacity-10 p-2 rounded text-primary me-3">
-                                    <i class="bi bi-geo-alt-fill fs-5"></i>
-                                </div>
-                                <div>
-                                    <span class="text-muted d-block" style="font-size: 0.8rem;">Location</span>
-                                    <span class="fw-semibold text-light">Tangerang, Indonesia</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="skills" class="py-5 section-divider">
-    <div class="container">
-        <h2 class="fw-bold text-center mb-5">Technical <span class="text-primary">Skills</span></h2>
-        <div class="row g-3 justify-content-center">
-            <div class="col-6 col-md-3"><div class="card glass-card skill-card p-3 text-center fw-bold">HTML5</div></div>
-            <div class="col-6 col-md-3"><div class="card glass-card skill-card p-3 text-center fw-bold">CSS3</div></div>
-            <div class="col-6 col-md-3"><div class="card glass-card skill-card p-3 text-center fw-bold">JavaScript</div></div>
-            <div class="col-6 col-md-3"><div class="card glass-card skill-card p-3 text-center fw-bold">React JS</div></div>
-            <div class="col-6 col-md-3"><div class="card glass-card skill-card p-3 text-center fw-bold">Next JS</div></div>
-            <div class="col-6 col-md-3"><div class="card glass-card skill-card p-3 text-center fw-bold">Bootstrap</div></div>
-            <div class="col-6 col-md-3"><div class="card glass-card skill-card p-3 text-center fw-bold">Tailwind</div></div>
-        </div>
-    </div>
-</section>
-
-<section id="projects" class="py-5 section-divider">
-    <div class="container">
-        <h2 class="fw-bold text-center mb-5" data-aos="fade-up" data-aos-duration="1000">Mini <span class="text-primary">Projects</span></h2>
-        
-        <div class="row g-2 g-md-4">
-            
-            <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-                <div class="card p-3 p-md-4 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                    <div>
-                        
-                        <div class="project-img-wrapper">
-                            <img src="images/himtif.png" alt="Web HIMTIF Unpam">
-                        </div>
-
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="bi bi-layers-fill text-primary fs-3 me-2 me-md-3"></i>
-                            <h5 class="fw-bold mb-0 fs-6 fs-md-5">Web HIMTIF Unpam</h5>
-                        </div>
-                        <p class="text-muted small d-none d-sm-block">Mengembangkan platform web resmi untuk organisasi HIMTIF menggunakan teknologi modern.</p>
-                        <span class="badge bg-primary bg-opacity-10 text-primary mb-3 small-badge">React JS, JavaScript</span>
-                    </div>
-                    <a href="https://himtifunpam.com/" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill px-2 px-md-3">
-                        <i class="bi bi-box-arrow-up-right me-1"></i> View
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                <div class="card p-3 p-md-4 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                    <div>
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="bi bi-code-slash text-primary fs-3 me-2 me-md-3"></i>
-                            <h5 class="fw-bold mb-0 fs-6 fs-md-5">Web Training Center</h5>
-                        </div>
-                        <p class="text-muted small d-none d-sm-block">Aplikasi web interaktif untuk manajemen atau pusat pelatihan (training center).</p>
-                        <span class="badge bg-primary bg-opacity-10 text-primary mb-3 small-badge">HTML, React JS, CSS</span>
-                    </div>
-                    <a href="#" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill px-2 px-md-3">
-                        <i class="bi bi-box-arrow-up-right me-1"></i> View
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                <div class="card p-3 p-md-4 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                    <div>
-
-                        <div class="project-img-wrapper">
-                            <img src="images/MANAJEMEN DATA.png" alt="Manajemen Data">
-                        </div>
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="bi bi-cpu text-primary fs-3 me-2 me-md-3"></i>
-                            <h5 class="fw-bold mb-0 fs-6 fs-md-5">Manajemen Data</h5>
-                        </div>
-                        <p class="text-muted small d-none d-sm-block">Sistem informasi berbasis CRUD untuk mengelola basis data akademik mahasiswa.</p>
-                        <span class="badge bg-primary bg-opacity-10 text-primary mb-3 small-badge">Database, CRUD</span>
-                    </div>
-                    <a href="https://sistem-manajemen-mahasiswa-eqnx.vercel.app/" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill px-2 px-md-3">
-                        <i class="bi bi-box-arrow-up-right me-1"></i> View
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-                <div class="card p-3 p-md-4 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                    <div>
-                        <div>
-                            <img src="images/manajemen kost.png" alt="Manajemen Kost" class="img-fluid mb-3 rounded-3">
-                        </div>
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="bi bi-house-door text-primary fs-3 me-2 me-md-3"></i>
-                            <h5 class="fw-bold mb-0 fs-6 fs-md-5">Manajemen Kost</h5>
-                        </div>
-                        <p class="text-muted small d-none d-sm-block">Sistem informasi berbasis website untuk pengelolaan kost untuk pemilik dan penghuni.</p>
-                        <span class="badge bg-primary bg-opacity-10 text-primary mb-3 small-badge">Next JS</span>
-                    </div>
-                    <a href="https://project-kost.vercel.app" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill px-2 px-md-3">
-                        <i class="bi bi-box-arrow-up-right me-1"></i> View
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-                <div class="card p-3 p-md-4 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                    <div>
-                        <div>
-                            <img src="images/manajemen keuangan.png" alt="Pencatatan Uang" class="img-fluid mb-3 rounded-3">
-                        </div>
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="bi bi-wallet2 text-primary fs-3 me-2 me-md-3"></i>
-                            <h5 class="fw-bold mb-0 fs-6 fs-md-5">Pencatatan Uang</h5>
-                        </div>
-                        <p class="text-muted small d-none d-sm-block">Sistem pencatatan keuangan sederhana untuk pelaku usaha.</p>
-                        <span class="badge bg-primary bg-opacity-10 text-primary mb-3 small-badge">HTML, CSS</span>
-                    </div>
-                    <a href="https://manajemen-mahasiswa-auce.vercel.app/" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill px-2 px-md-3">
-                        <i class="bi bi-box-arrow-up-right me-1"></i> View
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                <div class="card p-3 p-md-4 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                    <div>
-                        <div>
-                            <img src="images/portofolio.png" alt="Portofolio Web" class="img-fluid mb-3 rounded-3">
-                        </div>
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="bi bi-globe text-primary fs-3 me-2 me-md-3"></i>
-                            <h5 class="fw-bold mb-0 fs-6 fs-md-5">Portfolio Web</h5>
-                        </div>
-                        <p class="text-muted small d-none d-sm-block">Web portofolio pribadi sebagai representasi skill dan pengalaman di bidang IT.</p>
-                        <span class="badge bg-primary bg-opacity-10 text-primary mb-3 small-badge">HTML, CSS</span>
-                    </div>
-                    <a href="https://portfolio-jiwa.vercel.app/" target="_blank" class="btn btn-outline-primary btn-sm rounded-pill px-2 px-md-3">
-                        <i class="bi bi-box-arrow-up-right me-1"></i> View
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>    
-
-<section id="experience" class="py-5 bg-opacity-10 bg-dark shadow-inner section-divider" style="background-color: #151417;">
-    <div class="container">
-        <h2 class="fw-bold text-center mb-5">Work & Org <span class="text-primary">Experience</span></h2>
-        <div class="row g-4 justify-content-center">
-            <div class="col-md-10">
-                <div class="card p-4 mb-4" style="background: rgba(255,255,255,0.02); border-left: 4px solid #6610f2; border-radius: 0 1rem 1rem 0;">
-                    <div class="d-flex justify-content-between flex-wrap">
-                        <h5 class="fw-bold text-light mb-1">Internship Filkom Universitas Pamulang</h5>
-                        <span class="text-primary fw-bold">6 Bulan</span>
-                    </div>
-                    <p class="text-muted italic mb-2">Web Development (Full Stack)</p>
-                </div>
-                <div class="card p-4" style="background: rgba(255,255,255,0.02); border-left: 4px solid #0d6efd; border-radius: 0 1rem 1rem 0;">
-                    <div class="d-flex justify-content-between flex-wrap">
-                        <h5 class="fw-bold text-light mb-1">Himpunan Mahasiswa Teknik Informatika (HIMTIF)</h5>
-                        <span class="text-primary fw-bold">1 Tahun</span>
-                    </div>
-                    <p class="text-muted italic mb-2">- Kepala Department Ristek (Pengembang Website HIMTIF)</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="achievment" class="py-5 section-divider" data-aos="fade-up" data-aos-duration="1000">
-    <div class="container">
-        <h2 class="text-center mb-5 fw-bold">My <span class="text-primary">Achievements</span></h2>
-        
-        <!-- Perbaikan 1: Gunakan g-3 atau g-4 untuk jarak antar card saat sebelahan -->
-        <div class="row justify-content-center g-3">
-            
-            <!-- CARD 1: Masuk ke kolom pertama -->
-            <div class="col-12 col-md-6">
-                <div class="card glass-card p-4 border-primary h-100">
-                    <div class="d-flex align-items-center mb-3">
-                        <i class="bi bi-award-fill text-warning fs-1 me-3"></i>
-                        <div>
-                            <h5 class="fw-bold mb-0">Hak Cipta (HKI)</h5>
-                            <p class="text-muted small">Program Komputer: Kost Nuansa</p>
-                        </div>
-                    </div>
-                    <p class="text-light">
-                        Pencatatan resmi HKI untuk program komputer berjudul "Kost Nuansa" yang disahkan oleh Direktorat Jenderal Kekayaan Intelektual.
-                    </p>
-                    <a href="images/haki.pdf" target="_blank" class="btn btn-primary btn-sm rounded-pill mt-2">
-                        <i class="bi bi-file-earmark-pdf me-1"></i> Lihat Dokumen Resmi
-                    </a>
-                </div>
-            </div>
-
-            <!-- CARD 2: Masuk ke kolom kedua (Ganti mt-4 jadi h-100 agar tinggi card sejajar otomatis) -->
-            <div class="col-12 col-md-6">
-                <div class="card glass-card p-4 border-primary h-100">
-                    <div class="d-flex align-items-center mb-3">
-                        <i class="bi bi-trophy-fill text-warning fs-1 me-3"></i>
-                        <div>
-                            <h5 class="fw-bold mb-0">Hak Cipta (HKI)</h5>
-                            <p class="text-muted small">Program Komputer: IntervAI</p>
-                        </div>
-                    </div>
-                    <p class="text-light">
-                        Pencatatan resmi HKI untuk program komputer berjudul "IntervAI" yang disahkan oleh Direktorat Jenderal Kekayaan Intelektual.
-                    </p>
-                    <a href="images/intervai.pdf" target="_blank" class="btn btn-primary btn-sm rounded-pill mt-2">
-                        <i class="bi bi-file-earmark-pdf me-1"></i> Lihat Dokumen Resmi
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section id="sertificate" class="py-5 section-divider">
-    <div class="container">
-        <h2 class="text-center mb-4 fw-bold" data-aos="fade-up" data-aos-duration="1000">My <span class="text-primary">Certificates</span></h2>
-        
-        <ul class="nav nav-pills justify-content-center mb-5 gap-2" id="certTab" role="tablist" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active rounded-pill px-4" id="learning-tab" data-bs-toggle="tab" data-bs-target="#learning" type="button" role="tab" aria-controls="learning" aria-selected="true">
-                    <i class="bi bi-book-half me-2"></i>Course & Learning
-                </button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link rounded-pill px-4" id="activity-tab" data-bs-toggle="tab" data-bs-target="#activity" type="button" role="tab" aria-controls="activity" aria-selected="false">
-                    <i class="bi bi-people-fill me-2"></i>Activity & Organization
-                </button>
-            </li>
+      <nav id="navMain" aria-label="Navigasi utama">
+        <ul class="nav-links">
+          <li><a href="#hero" class="active"><span class="nav-num">01</span> / Hero</a></li>
+          <li><a href="#about"><span class="nav-num">02</span> / About me</a></li>
+          <li><a href="#projects"><span class="nav-num">03</span> / Project</a></li>
+          <li><a href="#experience"><span class="nav-num">04</span> / Experience</a></li>
         </ul>
+      </nav>
+    </div>
+  </header>
 
-        <div class="tab-content" id="certTabContent">
-            
-            <div class="tab-pane fade show active" id="learning" role="tabpanel" aria-labelledby="learning-tab">
-                <div class="row g-3 g-md-4">
-                    
-                    <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="1000">
-                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                            <div>
-                                <div class="project-img-wrapper">
-                                    <img src="images/eceset.png" alt="Sertifikat">
-                                </div>
-                                <h6 class="fw-bold mb-1 fs-6 text-white">Eceset Campus Security Day</h6>
-                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">Eset</p>
-                            </div>
-                                <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/eceset.png">
-                                    <i class="bi bi-eye me-1"></i> Credential
-                                </button>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-delay="100" data-aos-duration="1000">
-                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                            <div>
-                                <div class="project-img-wrapper">
-                                    <img src="images/BLK.png" alt="Sertifikat">
-                                </div>
-                                <h6 class="fw-bold mb-1 fs-6 text-white">Pelatihan Artificial Intelligence</h6>
-                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">Balai Latihan Kerja Kota Tangerang</p>
-                            </div>
-                                <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/BLK.png">
-                                    <i class="bi bi-eye me-1"></i> Credential
-                                </button>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1000">
-                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                            <div>
-                                <div class="project-img-wrapper">
-                                    <img src="images/perpus.jpg" alt="Sertifikat">
-                                </div>
-                                <h6 class="fw-bold mb-1 fs-6 text-white">Membangun Aplikasi Perpustakaan</h6>
-                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">Workshop Universitas Pamulang</p>
-                            </div>
-                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/perpus.jpg">
-                                 <i class="bi bi-eye me-1"></i> Credential
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1000">
-                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                            <div>
-                                <div class="project-img-wrapper">
-                                    <img src="images/sertif2.jpg" alt="Sertifikat">
-                                </div>
-                                <h6 class="fw-bold mb-1 fs-6 text-white">Class Pemrograman C++ Batch 6</h6>
-                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">Dilesin</p>
-                            </div>
-                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/sertif2.jpg">
-                                 <i class="bi bi-eye me-1"></i> Credential
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1000">
-                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                            <div>
-                                <div class="project-img-wrapper">
-                                    <img src="images/sertifcplusplus.jpg" alt="Sertifikat">
-                                </div>
-                                <h6 class="fw-bold mb-1 fs-6 text-white">Class Pemrograman C++ Batch 5</h6>
-                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">Dilesin</p>
-                            </div>
-                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/sertifcplusplus.jpg">
-                                <i class="bi bi-eye me-1"></i> Credential
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1000">
-                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                            <div>
-                                <div class="project-img-wrapper">
-                                    <img src="images/ssemt2.jpg" alt="Sertifikat">
-                                </div>
-                                <h6 class="fw-bold mb-1 fs-6 text-white">Masa Depan Web Development</h6>
-                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">Seminar Universitas Pamulang</p>
-                            </div>
-                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/ssemt2.jpg">
-                                <i class="bi bi-eye me-1"></i> Credential
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1000">
-                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                            <div>
-                                <div class="project-img-wrapper">
-                                    <img src="images/workshopsemt1.jpg" alt="Sertifikat">
-                                </div>
-                                <h6 class="fw-bold mb-1 fs-6 text-white">AI untuk pemula dan solusi keamanan siber</h6>
-                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">Workshop Universitas Pamulang</p>
-                            </div>
-                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/workshopsemt1.jpg">
-                                <i class="bi bi-eye me-1"></i> Credential
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="1000">
-                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                            <div>
-                                <div class="project-img-wrapper">
-                                    <img src="images/sem4.png" alt="Sertifikat">
-                                </div>
-                                <h6 class="fw-bold mb-1 fs-6 text-white">Empowering Century Digital Talent</h6>
-                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">Seminar Universitas Pamulang</p>
-                            </div>
-                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/sem4.png">
-                                 <i class="bi bi-eye me-1"></i> Credential
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="tab-pane fade" id="activity" role="tabpanel" aria-labelledby="activity-tab">
-                <div class="row g-3 g-md-4">
-                    
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                            <div>
-                                <div class="project-img-wrapper">
-                                    <img src="images/hackaton 2025.png" alt="Sertifikat">
-                                </div>
-                                <h6 class="fw-bold mb-1 fs-6 text-white">Panitia Hackaton 2025</h6>
-                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">HIMTIF Universitas Pamulang</p>
-                            </div>
-                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/hackaton 2025.png">
-                                <i class="bi bi-eye me-1"></i> Credential
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                            <div>
-                                <div class="project-img-wrapper">
-                                    <img src="images/hackathon 2026.png" alt="Sertifikat">
-                                </div>
-                                <h6 class="fw-bold mb-1 fs-6 text-white">Panitia Hackathon 2026</h6>
-                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">HIMTIF Universitas Pamulang</p>
-                            </div>
-                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/hackathon 2026.png">
-                                <i class="bi bi-eye me-1"></i> Credential
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                            <div>
-                                <div class="project-img-wrapper">
-                                    <img src="images/rudistif 2025.png" alt="Sertifikat">
-                                </div>
-                                <h6 class="fw-bold mb-1 fs-6 text-white">Panitia Ruang Diskusi HIMTIF 2025</h6>
-                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">HIMTIF Universitas Pamulang</p>
-                            </div>
-                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/rudistif 2025.png">
-                                 <i class="bi bi-eye me-1"></i> Credential
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                            <div>
-                                <div class="project-img-wrapper">
-                                    <img src="images/peserta rudistif.png" alt="Sertifikat">
-                                </div>
-                                <h6 class="fw-bold mb-1 fs-6 text-white">Peserta Ruang Diskusi HIMTIF 2024</h6>
-                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">HIMTIF Universitas Pamulang</p>
-                            </div>
-                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/peserta rudistif.png">
-                                <i class="bi bi-eye me-1"></i> Credential
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div class="card p-3 h-100 glass-card d-flex flex-column justify-content-between" data-tilt data-tilt-max="6" data-tilt-glare="true" data-tilt-max-glare="0.15">
-                            <div>
-                                <div class="project-img-wrapper">
-                                    <img src="images/DNL.png" alt="Sertifikat">
-                                </div>
-                                <h6 class="fw-bold mb-1 fs-6 text-white">Panitia DNL 2025</h6>
-                                <p class="text-muted small mb-2" style="font-size: 0.75rem;">HIMTIF Universitas Pamulang</p>
-                            </div>
-                            <button class="btn btn-outline-primary btn-sm rounded-pill w-100 mt-2" data-bs-toggle="modal" data-bs-target="#sertifModal" data-bs-img="images/DNL.png">
-                                <i class="bi bi-eye me-1"></i> Credential
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
+  <!-- ============ HERO ============ -->
+  <section id="hero" class="hero">
+    <div class="container-lg hero-grid">
+      <div class="reveal in">
+        <p class="mono-label"><span class="accent"></span>Muhammad Jiwa Islamutidar</p>
+        <h1 class="hero-title">
+          Muhammad<br>Jiwa Islamutidar<br><span class="accent">&amp;</span>
+        </h1>
+        <p class="hero-sub">
+          Membangun solusi digital yang efisien dengan perpaduan desain modern dan kode yang bersih. Fokus pada pengembangan web, optimasi performa, dan inovasi berbasis user-centric.
+        </p>
+        <div class="cta-row" style="display:flex;gap:.75rem;flex-wrap:wrap;">
+          <a class="btn-solid" href="#projects">Lihat Proyek ↓</a>
+          <a class="btn-ghost" href="#certificate">Sertifikat</a>
         </div>
-    </div>
+        <p class="hero-placeholder">
+          Full Stack Web Developer — Tangerang, ID <span class="bar"></span>
+        </p>
+      </div>
 
-</section>
-
-<div class="modal fade" id="sertifModal" tabindex="-1" aria-hidden="true" >
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content bg-dark border-0">
-            <div class="modal-header border-0"><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
-            <div class="modal-body text-center"><img src="" id="modalImage" class="img-fluid" alt="Sertifikat Besar"></div>
+      <div class="hero-photo reveal in">
+        <div class="frame">
+          <img src="images/mukapakealmet.png" alt="Foto Muhammad Jiwa Islamutidar">
         </div>
+        <div class="dot">JS<br>25</div>
+        <div class="tag">#Portfolio</div>
+      </div>
     </div>
-</div>
+  </section>
 
-<!-- Footer tetap di sini -->
-<footer class="bg-dark text-light py-4 border-top border-secondary">
-    <div class="container text-center">
-        <h5 class="fw-bold">Jiwa Islamutidar</h5>
-        <p class="mb-2 text-muted">Mahasiswa Teknik Informatika | Full Stack Web Developer</p>
-        <small class="text-muted">&copy; 2026 Jiwa. All rights reserved.</small>
+  <!-- ============ TICKER ============ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="track">
+      <span>WEB DEVELOPER</span><span>✦</span>
+      <span>HIMTIF UNPAM</span><span>✦</span>
+      <span>REACT JS</span><span>✦</span>
+      <span>NEXT JS</span><span>✦</span>
+      <span>CYBER SECURITY</span><span>✦</span>
+      <span>FULL STACK</span><span>✦</span>
+      <!-- duplikasi untuk loop -->
+      <span>WEB DEVELOPER</span><span>✦</span>
+      <span>HIMTIF UNPAM</span><span>✦</span>
+      <span>REACT JS</span><span>✦</span>
+      <span>NEXT JS</span><span>✦</span>
+      <span>CYBER SECURITY</span><span>✦</span>
+      <span>FULL STACK</span><span>✦</span>
     </div>
-</footer>
+  </div>
 
-<!-- SEMUA SCRIPT DIJADIKAN SATU DI SINI -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <div class="container-lg">
+      <div class="section-head">
+        <p class="mono-label">[ <span class="accent">02</span> ]</p>
+        <h2 class="section-title">Tentang Saya</h2>
+      </div>
 
-<script>
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', currentTheme);
+      <div class="cols cols-2">
+        <div class="reveal">
+          <p>
+            Hallo! Saya <strong>Jiwa</strong>, mahasiswa aktif Teknik Informatika dengan minat besar
+            di bidang <em>Web Development</em> dan <em>Cyber Security</em>.
+          </p>
+          <p style="color:var(--ink-soft);">
+            Saat ini saya fokus membangun website menggunakan teknologi modern. Dari platform
+            penjaringan aspirasi untuk organisasi mahasiswa, saya belajar bahwa teknologi yang
+            dirancang dengan baik dapat mengoptimalkan budaya profesional dan memberikan dampak
+            positif yang nyata.
+          </p>
+          <div class="skills-inline" style="margin-top:1.2rem;">
+            <div class="chips">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span>
+              <span>Next.js</span><span>Bootstrap</span><span>Tailwind</span>
+            </div>
+          </div>
+        </div>
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const toggleBtn = document.getElementById('theme-toggle');
-        const toggleIcon = document.getElementById('theme-icon');
+        <div class="reveal">
+          <div class="about-stats">
+            <div class="cols" style="grid-template-columns:1fr 1fr; gap:.8rem;">
+              <div class="stat">
+                <div class="num">15+</div>
+                <div class="lbl">Proyek Selesai</div>
+              </div>
+              <div class="stat">
+                <div class="num">3+</div>
+                <div class="lbl">Tahun Belajar</div>
+              </div>
+            </div>
+          </div>
 
-        if (currentTheme === 'light' && toggleIcon) {
-            toggleIcon.classList.replace('bi-moon-stars-fill', 'bi-sun-fill');
-        }
+          <div class="contact-list">
+            <dl>
+              <div class="row">
+                <dt>Email</dt>
+                <dd><a href="mailto:mjiwaislamutidar@gmail.com">mjiwaislamutidar@gmail.com</a></dd>
+              </div>
+              <div class="row">
+                <dt>Lokasi</dt>
+                <dd>Tangerang, Indonesia</dd>
+              </div>
+              <div class="row">
+                <dt>Status</dt>
+                <dd>Informatics Engineering Student</dd>
+              </div>
+            </dl>
+          </div>
 
-        if (toggleBtn) {
-            toggleBtn.addEventListener('click', () => {
-                let theme = document.documentElement.getAttribute('data-theme');
-                if (theme === 'dark') {
-                    document.documentElement.setAttribute('data-theme', 'light');
-                    localStorage.setItem('theme', 'light');
-                    if (toggleIcon) toggleIcon.classList.replace('bi-moon-stars-fill', 'bi-sun-fill');
-                } else {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                    localStorage.setItem('theme', 'dark');
-                    if (toggleIcon) toggleIcon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
-                }
-            });
-        }
+          <div class="socials">
+            <a href="https://github.com/mjiwa" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-1.94c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.1 11.1 0 0 1 5.78 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.24 2.76.12 3.05.74.81 1.19 1.84 1.19 3.1 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.15c0 .3.21.67.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a>
+            <a href="https://www.linkedin.com/in/muhammad-jiwa-islamutidar" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.55V9h3.57v11.45Z"/></svg></a>
+            <a href="https://www.instagram.com/mjiwa_" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9c-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 1.8c-3.15 0-3.52.01-4.77.07-1.08.05-1.67.23-2.06.38-.52.2-.89.44-1.28.83-.39.39-.63.76-.83 1.28-.15.39-.33.98-.38 2.06-.06 1.25-.07 1.62-.07 4.77s.01 3.52.07 4.77c.05 1.08.23 1.67.38 2.06.2.52.44.89.83 1.28.39.39.76.63 1.28.83.39.15.98.33 2.06.38 1.25.06 1.62.07 4.77.07s3.52-.01 4.77-.07c1.08-.05 1.67-.23 2.06-.38.52-.2.89-.44 1.28-.83.39-.39.63-.76.83-1.28.15-.39.33-.98.38-2.06.06-1.25.07-1.62.07-4.77s-.01-3.52-.07-4.77c-.05-1.08-.23-1.67-.38-2.06-.2-.52-.44-.89-.83-1.28a3.44 3.44 0 0 0-1.28-.83c-.39-.15-.98-.33-2.06-.38-1.25-.06-1.62-.07-4.77-.07Zm0 3.06a5.63 5.63 0 1 1 0 11.26 5.63 5.63 0 0 1 0-11.26Zm0 9.29a3.66 3.66 0 1 0 0-7.32 3.66 3.66 0 0 0 0 7.32Zm7.2-9.52a1.31 1.31 0 1 1-2.63 0 1.31 1.31 0 0 1 2.63 0Z"/></svg></a>
+          </div>
 
-        AOS.init({ 
-            duration: 900, 
-            once: false,
-            mirror: true,    
-            offset: 80,    
-            easing: 'ease-out-cubic'
-        });
-        
+          <div style="margin-top:1.4rem;">
+            <a class="btn-solid btn-sm" href="images/CV - Muhammad Jiwa Islamutidar.pdf" target="_blank">
+              Unduh CV ↓
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        const sertifModal = document.getElementById('sertifModal');
-        if (sertifModal) {
-            sertifModal.addEventListener('show.bs.modal', function (event) {
-                const button = event.relatedTarget;
-                const imgSrc = button.getAttribute('data-bs-img');
-                document.getElementById('modalImage').src = imgSrc;
-            });
-        }
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" style="padding-top:0;">
+    <div class="container-lg">
+      <div class="section-head">
+        <p class="mono-label">[ <span class="accent">03</span> ]</p>
+        <h2 class="section-title">Keahlian Teknis</h2>
+      </div>
+      <div class="skill-list reveal">
+        <span class="skill-chip"><i class="dot"></i>HTML5</span>
+        <span class="skill-chip"><i class="dot"></i>CSS3</span>
+        <span class="skill-chip"><i class="dot"></i>JavaScript</span>
+        <span class="skill-chip"><i class="dot"></i>React JS</span>
+        <span class="skill-chip"><i class="dot"></i>Next JS</span>
+        <span class="skill-chip"><i class="dot"></i>Bootstrap</span>
+        <span class="skill-chip"><i class="dot"></i>Tailwind CSS</span>
+        <span class="skill-chip"><i class="dot"></i>Database & CRUD</span>
+      </div>
+    </div>
+  </section>
 
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                navLinks.forEach(nav => nav.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects">
+    <div class="container-lg">
+      <div class="section-head">
+        <p class="mono-label">[ <span class="accent">04</span> ]</p>
+        <h2 class="section-title">Proyek Pilihan</h2>
+      </div>
 
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#navbar-example',
-            offset: 100
-        });
+      <div class="grid-projects">
+        <!-- Proyek 1 -->
+        <article class="project-card reveal">
+          <div class="thumb"><img src="images/himtif.png" alt="Web HIMTIF Unpam" loading="lazy"></div>
+          <div class="body">
+            <p class="meta">Organisasi · Web Platform</p>
+            <h3>Web HIMTIF Unpam</h3>
+            <p>Platform web resmi organisasi HIMTIF dengan teknologi modern.</p>
+            <div class="chips"><span>React JS</span><span>JavaScript</span></div>
+            <div class="foot">
+              <a class="go-link" href="https://himtifunpam.com/" target="_blank" rel="noopener">Buka Proyek →</a>
+            </div>
+          </div>
+        </article>
 
-        function typeWriter(elementId, text, speed) {
-            let i = 0;
-            const el = document.getElementById(elementId);
-            if (!el) return;
-            function type() {
-                if (i < text.length) {
-                    el.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
-        }
+        <!-- Proyek 2 -->
+        <article class="project-card reveal">
+          <div class="icon-card">⟨/⟩</div>
+          <div class="body">
+            <p class="meta">Aplikasi Web</p>
+            <h3>Web Training Center</h3>
+            <p>Aplikasi interaktif untuk manajemen pusat pelatihan.</p>
+            <div class="chips"><span>HTML</span><span>React JS</span><span>CSS</span></div>
+            <div class="foot">
+              <a class="go-link" href="#" target="_blank" rel="noopener">Buka Proyek →</a>
+            </div>
+          </div>
+        </article>
 
-        const title = "Informatics Engineering Student & Web Developer";
-        const desc = "Membangun solusi digital yang efisien dengan perpaduan desain modern dan kode yang bersih. Fokus pada pengembangan web, optimasi performa, dan inovasi berbasis user-centric.";
-        
-        typeWriter("typed-title", title, 50);
-        setTimeout(() => {
-            typeWriter("typed-text", desc, 20);
-        }, 2500);
+        <!-- Proyek 3 -->
+        <article class="project-card reveal">
+          <div class="thumb"><img src="images/MANAJEMEN DATA.png" alt="Manajemen Data" loading="lazy"></div>
+          <div class="body">
+            <p class="meta">Sistem Informasi · CRUD</p>
+            <h3>Manajemen Data Mahasiswa</h3>
+            <p>Sistem CRUD untuk mengelola basis data akademik mahasiswa.</p>
+            <div class="chips"><span>Database</span><span>CRUD</span></div>
+            <div class="foot">
+              <a class="go-link" href="https://sistem-manajemen-mahasiswa-eqnx.vercel.app/" target="_blank" rel="noopener">Buka Proyek →</a>
+            </div>
+          </div>
+        </article>
 
-        window.addEventListener('scroll', () => {
-            const winScroll = document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            const progressBar = document.getElementById('progress-bar');
-            if (progressBar) progressBar.style.width = scrolled + "%";
-        });
+        <!-- Proyek 4 -->
+        <article class="project-card reveal">
+          <div class="thumb"><img src="images/manajemen kost.png" alt="Manajemen Kost" loading="lazy"></div>
+          <div class="body">
+            <p class="meta">Sistem Informasi</p>
+            <h3>Manajemen Kost</h3>
+            <p>Sistem pengelolaan kost untuk pemilik dan penghuni.</p>
+            <div class="chips"><span>Next JS</span></div>
+            <div class="foot">
+              <a class="go-link" href="https://project-kost.vercel.app" target="_blank" rel="noopener">Buka Proyek →</a>
+            </div>
+          </div>
+        </article>
 
-        const lenis = new Lenis({
-            lerp: 0.2,            
-            wheelMultiplier: 1.3, 
-            gestureOrientation: "vertical",
-            smoothWheel: true     
-        });
+        <!-- Proyek 5 -->
+        <article class="project-card reveal">
+          <div class="thumb"><img src="images/manajemen keuangan.png" alt="Pencatatan Uang" loading="lazy"></div>
+          <div class="body">
+            <p class="meta">Aplikasi Web</p>
+            <h3>Pencatatan Keuangan</h3>
+            <p>Sistem pencatatan keuangan sederhana untuk pelaku usaha.</p>
+            <div class="chips"><span>HTML</span><span>CSS</span></div>
+            <div class="foot">
+              <a class="go-link" href="https://manajemen-mahasiswa-auce.vercel.app/" target="_blank" rel="noopener">Buka Proyek →</a>
+            </div>
+          </div>
+        </article>
 
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
+        <!-- Proyek 6 -->
+        <article class="project-card reveal">
+          <div class="thumb"><img src="images/portofolio.png" alt="Portfolio Web" loading="lazy"></div>
+          <div class="body">
+            <p class="meta">Portfolio</p>
+            <h3>Portfolio Web Ini</h3>
+            <p>Representasi skill & pengalaman di bidang IT.</p>
+            <div class="chips"><span>HTML</span><span>CSS</span></div>
+            <div class="foot">
+              <a class="go-link" href="https://portfolio-jiwa.vercel.app/" target="_blank" rel="noopener">Buka Proyek →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-        requestAnimationFrame(raf);
+  <!-- ============ EXPERIENCE ============ -->
+  <section id="experience">
+    <div class="container-lg">
+      <div class="section-head">
+        <p class="mono-label">[ <span class="accent">05</span> ]</p>
+        <h2 class="section-title">Pengalaman</h2>
+      </div>
+
+      <div class="timeline reveal" style="max-width:720px;">
+        <div class="timeline-item">
+          <p class="when">2025 — 2026 · 6 Bulan</p>
+          <h3>Internship Filkom Universitas Pamulang</h3>
+          <p class="role">Web Development (Full Stack)</p>
+          <ul>
+            <li>Mengembangkan fitur front-end & integrasi API pada sistem Training Center.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <p class="when">2024 — 2025 · 1 Tahun</p>
+          <h3>Himpunan Mahasiswa Teknik Informatika (HIMTIF)</h3>
+          <p class="role">Kepala Departemen Ristek</p>
+          <ul>
+            <li>Memimpin pengembangan website HIMTIF.</li>
+            <li>Mengelola tim riset & teknologi internal.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ACHIEVEMENT ============ -->
+  <section id="achievement">
+    <div class="container-lg">
+      <div class="section-head">
+        <p class="mono-label">[ <span class="accent">06</span> ]</p>
+        <h2 class="section-title">Capaian</h2>
+      </div>
+
+      <div class="list-achv reveal" style="max-width:820px;">
+        <div class="achv-item">
+          <span class="idx">01</span>
+          <div>
+            <h3>Hak Cipta (HKI) — Kost Nuansa</h3>
+            <p>Pencatatan resmi program komputer "Kost Nuansa" oleh DJKI.</p>
+          </div>
+          <a class="btn-ghost btn-sm achv-cta" href="images/haki.pdf" target="_blank">PDF →</a>
+        </div>
+        <div class="achv-item">
+          <span class="idx">02</span>
+          <div>
+            <h3>Hak Cipta (HKI) — IntervAI</h3>
+            <p>Pencatatan resmi program komputer "IntervAI" oleh DJKI.</p>
+          </div>
+          <a class="btn-ghost btn-sm achv-cta" href="images/intervai.pdf" target="_blank">PDF →</a>
+        </div>
+        <div class="achv-item">
+          <span class="idx">03</span>
+          <div>
+            <h3>Panitia Hackathon 2026</h3>
+            <p>Terlibat sebagai panitia penyelenggara HIMTIF.</p>
+          </div>
+          <span class="mono-label">Sertifikat ↓</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATE ============ -->
+  <section id="certificate">
+    <div class="container-lg">
+      <div class="section-head">
+        <p class="mono-label">[ <span class="accent">07</span> ]</p>
+        <h2 class="section-title">Sertifikat</h2>
+      </div>
+
+      <div class="tabs" role="tablist">
+        <button class="tab-btn active" data-panel="learning" role="tab" aria-selected="true">Kursus &amp; Belajar</button>
+        <button class="tab-btn" data-panel="activity" role="tab" aria-selected="false">Aktivitas &amp; Organisasi</button>
+      </div>
+
+      <!-- Panel 1: Learning -->
+      <div class="panel active" id="learning" role="tabpanel">
+        <div class="grid-cert">
+          <article class="cert-card reveal">
+            <div class="thumb"><img src="images/eceset.png" alt="Eceset Campus Security Day" loading="lazy" class="zoomable"></div>
+            <div class="body">
+              <span class="issuer">Eset</span>
+              <h3>Eceset Campus Security Day</h3>
+            </div>
+          </article>
+          <article class="cert-card reveal">
+            <div class="thumb"><img src="images/BLK.png" alt="Pelatihan Artificial Intelligence" loading="lazy" class="zoomable"></div>
+            <div class="body">
+              <span class="issuer">BLK Kota Tangerang</span>
+              <h3>Pelatihan Artificial Intelligence</h3>
+            </div>
+          </article>
+          <article class="cert-card reveal">
+            <div class="thumb"><img src="images/perpus.jpg" alt="Membangun Aplikasi Perpustakaan" loading="lazy" class="zoomable"></div>
+            <div class="body">
+              <span class="issuer">Workshop Universitas Pamulang</span>
+              <h3>Membangun Aplikasi Perpustakaan</h3>
+            </div>
+          </article>
+          <article class="cert-card reveal">
+            <div class="thumb"><img src="images/sertif2.jpg" alt="Class Pemrograman C++ Batch 6" loading="lazy" class="zoomable"></div>
+            <div class="body">
+              <span class="issuer">Dilesin</span>
+              <h3>Class Pemrograman C++ Batch 6</h3>
+            </div>
+          </article>
+          <article class="cert-card reveal">
+            <div class="thumb"><img src="images/sertifcplusplus.jpg" alt="Class Pemrograman C++ Batch 5" loading="lazy" class="zoomable"></div>
+            <div class="body">
+              <span class="issuer">Dilesin</span>
+              <h3>Class Pemrograman C++ Batch 5</h3>
+            </div>
+          </article>
+          <article class="cert-card reveal">
+            <div class="thumb"><img src="images/ssemt2.jpg" alt="Masa Depan Web Development" loading="lazy" class="zoomable"></div>
+            <div class="body">
+              <span class="issuer">Seminar Universitas Pamulang</span>
+              <h3>Masa Depan Web Development</h3>
+            </div>
+          </article>
+          <article class="cert-card reveal">
+            <div class="thumb"><img src="images/workshopsemt1.jpg" alt="AI untuk pemula dan solusi keamanan siber" loading="lazy" class="zoomable"></div>
+            <div class="body">
+              <span class="issuer">Workshop Universitas Pamulang</span>
+              <h3>AI untuk Pemula &amp; Solusi Keamanan Siber</h3>
+            </div>
+          </article>
+          <article class="cert-card reveal">
+            <div class="thumb"><img src="images/sem4.png" alt="Empowering Century Digital Talent" loading="lazy" class="zoomable"></div>
+            <div class="body">
+              <span class="issuer">Seminar Universitas Pamulang</span>
+              <h3>Empowering Century Digital Talent</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Panel 2: Activity -->
+      <div class="panel" id="activity" role="tabpanel">
+        <div class="grid-cert">
+          <article class="cert-card reveal">
+            <div class="thumb"><img src="images/hackaton 2025.png" alt="Panitia Hackaton 2025" loading="lazy" class="zoomable"></div>
+            <div class="body">
+              <span class="issuer">HIMTIF Universitas Pamulang</span>
+              <h3>Panitia Hackaton 2025</h3>
+            </div>
+          </article>
+          <article class="cert-card reveal">
+            <div class="thumb"><img src="images/hackathon 2026.png" alt="Panitia Hackathon 2026" loading="lazy" class="zoomable"></div>
+            <div class="body">
+              <span class="issuer">HIMTIF Universitas Pamulang</span>
+              <h3>Panitia Hackathon 2026</h3>
+            </div>
+          </article>
+          <article class="cert-card reveal">
+            <div class="thumb"><img src="images/rudistif 2025.png" alt="Panitia Ruang Diskusi HIMTIF 2025" loading="lazy" class="zoomable"></div>
+            <div class="body">
+              <span class="issuer">HIMTIF Universitas Pamulang</span>
+              <h3>Panitia Ruang Diskusi HIMTIF 2025</h3>
+            </div>
+          </article>
+          <article class="cert-card reveal">
+            <div class="thumb"><img src="images/peserta rudistif.png" alt="Peserta Ruang Diskusi HIMTIF 2024" loading="lazy" class="zoomable"></div>
+            <div class="body">
+              <span class="issuer">HIMTIF Universitas Pamulang</span>
+              <h3>Peserta Ruang Diskusi HIMTIF 2024</h3>
+            </div>
+          </article>
+          <article class="cert-card reveal">
+            <div class="thumb"><img src="images/DNL.png" alt="Panitia DNL 2025" loading="lazy" class="zoomable"></div>
+            <div class="body">
+              <span class="issuer">HIMTIF Universitas Pamulang</span>
+              <h3>Panitia DNL 2025</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container-lg">
+      <span class="brand">Jiwa<span class="star">*</span></span>
+      <small>© 2026 Muhammad Jiwa Islamutidar.</small>
+      <p class="mono-label">Informatic Engineering</p>
+    </div>
+  </footer>
+
+  <!-- ============ MODAL ============ -->
+  <div class="modal-backdrop" id="certModal" role="dialog" aria-modal="true" aria-label="Pratinjau Sertifikat">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" aria-label="Tutup">✕</button>
+      <img src="" alt="Pratinjau Sertifikat">
+    </div>
+  </div>
+
+  <script>
+    // ---------- THEME TOGGLE ----------
+    const html = document.documentElement;
+    const themeBtn = document.getElementById('themeToggle');
+    const themeIcon = themeBtn.querySelector('.theme-icon');
+
+    function applyTheme(theme) {
+      html.setAttribute('data-theme', theme);
+      themeIcon.textContent = theme === 'dark' ? '☀' : '☾';
+    }
+    applyTheme(localStorage.getItem('theme') || 'light');
+    themeBtn.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+      localStorage.setItem('theme', next);
     });
-</script>
+
+    // ---------- MOBILE NAV ----------
+    const toggler = document.getElementById('navToggler');
+    const navMain = document.getElementById('navMain');
+    toggler.addEventListener('click', () => {
+      const open = navMain.classList.toggle('open');
+      toggler.setAttribute('aria-expanded', open);
+      toggler.querySelector('.toggler-icon').textContent = open ? '✕' : '☰';
+    });
+
+    // ---------- ACTIVE NAV LINK (scroll spy) ----------
+    const sections = document.querySelectorAll('section[id], #hero');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navLinks.forEach((a) => a.classList.remove('active'));
+          document.querySelector(`.nav-links a[href="#${entry.target.id}"]`)?.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    sections.forEach((s) => spy.observe(s));
+
+    // ---------- REVEAL ON SCROLL ----------
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('in'); revealObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach((el) => revealObs.observe(el));
+
+    // ---------- TABS (Certificates) ----------
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    tabBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach((b) => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+        document.querySelectorAll('.panel').forEach((p) => p.classList.remove('active'));
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        document.getElementById(btn.dataset.panel)?.classList.add('active');
+      });
+    });
+
+    // ---------- MODAL (Certificate preview) ----------
+    const modal = document.getElementById('certModal');
+    const modalImg = modal.querySelector('img');
+    const modalClose = document.getElementById('modalClose');
+    document.querySelectorAll('.zoomable').forEach((img) => {
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    function closeModal() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    modalClose.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+  </script>
 </body>
 </html>
+

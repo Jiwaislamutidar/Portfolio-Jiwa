@@ -1,15 +1,15 @@
-# TODO: Redesign Portfolio Website Layout
+# TODO: Redesign Portfolio — Editorial Neo-Brutalist
+
+## Goals
+- Hapus tampilan "AI slop" (glassmorphism, glow, gradient text, tilt, blur blob, typewriter)
+- Desain baru: Editorial Neo-Brutalist (serif display, mono label, hard shadow, border tegas)
+- Warna: kertas + tinta + aksen oranye (tanpa ungu/biru)
+- Toggle Light/Dark theme yang berfungsi & tersimpan di localStorage
 
 ## Tasks
-- [x] Update index.html with modern layout: Add hero animations, improve about section, enhance certificates section.
-- [x] Update style.css: Add modern styles, gradients, animations, responsive design.
-- [ ] Integrate or improve separate pages (about, contact, sertificate) if needed.
-- [x] Test responsiveness and functionality.
-- [x] Final review and adjustments.
+- [x] style.css — tulis ulang dengan design tokens (light + dark), tipografi baru (Fraunces/Inter/JetBrains Mono), komponen brutalism
+- [x] index.html — struktur baru: navbar + theme toggle, hero editorial, about, skills, projects, experience, achievements, certificates, footer
+- [x] index.html — update script: theme toggle, scroll-spy, tabs, modal, reveal; bootstrap/AOS/Lenis/tilt/typewriter dihapus
+- [x] Test di browser (desktop & mobile)
+- [x] Final review & update TODO
 
-## Progress
-- Redesigned index.html with modern animations, hover effects, and improved layout.
-- Updated style.css with glassmorphism effects, gradients, responsive design, and custom scrollbar.
-- Tested the website by opening in browser.
-- Separate pages (about, contact, sertificate) are basic but functional; can be improved later if needed.
-- Portfolio now has a "cool" modern look with animations and responsive design.

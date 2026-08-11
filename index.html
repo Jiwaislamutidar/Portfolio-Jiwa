@@ -63,7 +63,7 @@
 
       <div class="hero-photo reveal in">
         <div class="frame">
-          <img src="images/mukapakealmet.png" alt="Foto Muhammad Jiwa Islamutidar">
+          <img src="images/pakebatik.jpg" alt="Foto Muhammad Jiwa Islamutidar">
         </div>
         <div class="dot">Jw<br></div>
         <div class="tag">#Portfolio</div>
@@ -94,7 +94,7 @@
   <section id="about">
     <div class="container-lg">
       <div class="section-head">
-        <h2 class="section-title">Tentang Saya</h2>
+        <h2 class="section-title">About Me</h2>
       </div>
 
       <div class="cols cols-2">
@@ -168,7 +168,7 @@
   <section id="skills" style="padding-top:0;">
     <div class="container-lg">
       <div class="section-head">
-        <h2 class="section-title">Keahlian Teknis</h2>
+        <h2 class="section-title">Skills</h2>
       </div>
       <div class="skill-list reveal">
         <span class="skill-chip"><i class="dot"></i>HTML5</span>
@@ -207,14 +207,14 @@
 
         <!-- Proyek 2 -->
         <article class="project-card reveal">
-          <div class="icon-card">⟨/⟩</div>
+          <div class="thumb"><img src="images/training.png" alt="Web Training Center" loading="lazy"></div>
           <div class="body">
             <p class="meta">Aplikasi Web</p>
             <h3>Web Training Center</h3>
             <p>Aplikasi interaktif untuk manajemen pusat pelatihan.</p>
             <div class="chips"><span>HTML</span><span>React JS</span><span>CSS</span></div>
             <div class="foot">
-              <a class="go-link" href="#" target="_blank" rel="noopener">Buka Proyek →</a>
+              <a class="go-link" href="javascript:void(0)" onclick="openModal('images/training.png')">Buka Proyek →</a>
             </div>
           </div>
         </article>
@@ -274,6 +274,20 @@
             </div>
           </div>
         </article>
+
+        <!-- proyek 7-->>
+        <article class="project-card reveal">
+          <div class="thumb"><img src="images/aspirasi.png" alt="Portfolio Web" loading="lazy"></div>
+          <div class="body">
+            <p class="meta">e-aspirasi</p>
+            <h3>Sistem aspirasi</h3>
+            <p>Sistem aspirasi masyarakat berbasis web untuk menampung segala saran dan keluhan.</p>
+            <div class="chips"><span>Laravel</span><span>mysql</span></div>
+            <div class="foot">
+              <a class="go-link" href="https://aspirasi-tau.vercel.app/" target="_blank" rel="noopener">Buka Proyek →</a>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -282,26 +296,27 @@
   <section id="experience">
     <div class="container-lg">
       <div class="section-head">
-        <h2 class="section-title">Pengalaman</h2>
+        <h2 class="section-title">Experience</h2>
       </div>
 
       <div class="timeline reveal" style="max-width:720px;">
         <div class="timeline-item">
           <p class="when">2025 — 2026 · 6 Bulan</p>
           <h3>Internship Filkom Universitas Pamulang</h3>
-          <p class="role">Web Development (Full Stack)</p>
+          <p class="role">Web Development (Front End)</p>
           <ul>
             <li>Mengembangkan fitur front-end & integrasi API pada sistem Training Center.</li>
           </ul>
         </div>
 
         <div class="timeline-item">
-          <p class="when">2024 — 2025 · 1 Tahun</p>
+          <p class="when">2024 — 2026 · 2 Tahun</p>
           <h3>Himpunan Mahasiswa Teknik Informatika (HIMTIF)</h3>
           <p class="role">Kepala Departemen Ristek</p>
           <ul>
             <li>Memimpin pengembangan website HIMTIF.</li>
             <li>Mengelola tim riset & teknologi internal.</li>
+            <li>Menjadi penanggung jawab program kerja</li>
           </ul>
         </div>
       </div>
@@ -312,7 +327,7 @@
   <section id="achievement">
     <div class="container-lg">
       <div class="section-head">
-        <h2 class="section-title">Capaian</h2>
+        <h2 class="section-title">Achievement</h2>
       </div>
 
       <div class="list-achv reveal" style="max-width:820px;">
@@ -340,7 +355,7 @@
   <section id="certificate">
     <div class="container-lg">
       <div class="section-head">
-        <h2 class="section-title">Sertifikat</h2>
+        <h2 class="section-title">Certificate</h2>
       </div>
 
       <div class="tabs" role="tablist">
@@ -487,6 +502,7 @@
       localStorage.setItem('theme', next);
     });
 
+
     // ---------- MOBILE NAV ----------
     const toggler = document.getElementById('navToggler');
     const navMain = document.getElementById('navMain');
@@ -548,7 +564,31 @@
     modalClose.addEventListener('click', closeModal);
     modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+    function openModal(imgSrc) {
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  modalImg.src = imgSrc;
+  modal.style.display = "flex";
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("imageModal");
+  if (event.target === modal) {
+    closeModal();
+  }
+}
   </script>
+  <div id="imageModal" class="modal-overlay">
+  <div class="modal-card">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="Project Preview">
+  </div>
+</div>
 </body>
 </html>
 

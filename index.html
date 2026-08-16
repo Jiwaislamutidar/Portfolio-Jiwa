@@ -54,7 +54,7 @@
         </p>
         <div class="cta-row" style="display:flex;gap:.75rem;flex-wrap:wrap;">
           <a class="btn-solid" href="#projects">Lihat Proyek ↓</a>
-          <a class="btn-ghost" href="#certificate">Sertifikat</a>
+          <a class="btn-ghost" href="#experience">Experience</a>
         </div>
         <p class="hero-placeholder">
           Full Stack Web Developer — Tangerang, ID <span class="bar"></span>
@@ -154,10 +154,13 @@
             <a href="https://www.instagram.com/mjiwa_" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9c-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 1.8c-3.15 0-3.52.01-4.77.07-1.08.05-1.67.23-2.06.38-.52.2-.89.44-1.28.83-.39.39-.63.76-.83 1.28-.15.39-.33.98-.38 2.06-.06 1.25-.07 1.62-.07 4.77s.01 3.52.07 4.77c.05 1.08.23 1.67.38 2.06.2.52.44.89.83 1.28.39.39.76.63 1.28.83.39.15.98.33 2.06.38 1.25.06 1.62.07 4.77.07s3.52-.01 4.77-.07c1.08-.05 1.67-.23 2.06-.38.52-.2.89-.44 1.28-.83.39-.39.63-.76.83-1.28.15-.39.33-.98.38-2.06.06-1.25.07-1.62.07-4.77s-.01-3.52-.07-4.77c-.05-1.08-.23-1.67-.38-2.06-.2-.52-.44-.89-.83-1.28a3.44 3.44 0 0 0-1.28-.83c-.39-.15-.98-.33-2.06-.38-1.25-.06-1.62-.07-4.77-.07Zm0 3.06a5.63 5.63 0 1 1 0 11.26 5.63 5.63 0 0 1 0-11.26Zm0 9.29a3.66 3.66 0 1 0 0-7.32 3.66 3.66 0 0 0 0 7.32Zm7.2-9.52a1.31 1.31 0 1 1-2.63 0 1.31 1.31 0 0 1 2.63 0Z"/></svg></a>
           </div>
 
-          <div style="margin-top:1.4rem;">
+          <div style="margin-top:1.4rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
             <a class="btn-solid btn-sm" href="images/CV - Muhammad Jiwa Islamutidar.pdf" target="_blank">
               Unduh CV ↓
             </a>
+            <button type="button" class="btn-solid btn-sm" id="contactBtnAbout" style="cursor: pointer; border: none; font-family: inherit;">
+              Kirim Pesan
+            </button>
           </div>
         </div>
       </div>
@@ -179,6 +182,7 @@
         <span class="skill-chip"><i class="dot"></i>Bootstrap</span>
         <span class="skill-chip"><i class="dot"></i>Tailwind CSS</span>
         <span class="skill-chip"><i class="dot"></i>Database & CRUD</span>
+        <span class="skill-chip"><i class="dot"></i>Laravel</span>
       </div>
     </div>
   </section>
@@ -477,7 +481,41 @@
     </div>
   </footer>
 
-  <!-- ============ MODAL ============ -->
+  <!-- ============ NOTIFICATION TOAST ============ -->
+  <div id="notificationToast" class="notification-toast" role="alert" aria-live="polite">
+    <div class="notification-content">
+      <span class="notification-icon">✓</span>
+      <div class="notification-text">
+        <p class="notification-title">Terima kasih!</p>
+        <p class="notification-message">Pesan sudah terkirim kepada Jiwa</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ MODAL CONTACT FORM ============ -->
+  <div class="modal-backdrop" id="contactModal" role="dialog" aria-modal="true" aria-label="Form Kontak">
+    <div class="modal-box contact-modal">
+      <button class="modal-close" id="contactModalClose" aria-label="Tutup">✕</button>
+      <h3 style="margin-bottom: 1rem; font-size: 1.3rem;">Kirim Pesan</h3>
+      <form id="contactForm" style="display: flex; flex-direction: column; gap: 1rem;">
+        <div>
+          <label for="contactName" style="display: block; margin-bottom: 0.4rem; font-size: 0.9rem;">Nama *</label>
+          <input type="text" id="contactName" name="name" required placeholder="Nama Anda" style="width: 100%; padding: 0.7rem; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 0.95rem; background: var(--bg); color: var(--text);">
+        </div>
+        <div>
+          <label for="contactEmail" style="display: block; margin-bottom: 0.4rem; font-size: 0.9rem;">Email *</label>
+          <input type="email" id="contactEmail" name="email" required placeholder="email@example.com" style="width: 100%; padding: 0.7rem; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 0.95rem; background: var(--bg); color: var(--text);">
+        </div>
+        <div>
+          <label for="contactMessage" style="display: block; margin-bottom: 0.4rem; font-size: 0.9rem;">Pesan *</label>
+          <textarea id="contactMessage" name="message" required placeholder="Tulis pesan Anda..." rows="5" style="width: 100%; padding: 0.7rem; border: 1px solid var(--border); border-radius: 6px; font-family: inherit; font-size: 0.95rem; background: var(--bg); color: var(--text); resize: vertical;"></textarea>
+        </div>
+        <button type="submit" class="btn-solid" style="margin-top: 0.5rem;">Kirim Pesan</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============ MODAL CERTIFICATE PREVIEW ============ -->
   <div class="modal-backdrop" id="certModal" role="dialog" aria-modal="true" aria-label="Pratinjau Sertifikat">
     <div class="modal-box">
       <button class="modal-close" id="modalClose" aria-label="Tutup">✕</button>
@@ -485,7 +523,18 @@
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"></script>
   <script>
+    // Tunggu EmailJS library loaded sebelum init
+    function initEmailJS() {
+      if (typeof emailjs !== 'undefined') {
+        emailjs.init('gJ5DiGwLrFF5Nqhj3');
+      } else {
+        setTimeout(initEmailJS, 100);
+      }
+    }
+    initEmailJS();
+
     // ---------- THEME TOGGLE ----------
     const html = document.documentElement;
     const themeBtn = document.getElementById('themeToggle');
@@ -511,6 +560,123 @@
       toggler.setAttribute('aria-expanded', open);
       toggler.querySelector('.toggler-icon').textContent = open ? '✕' : '☰';
     });
+
+    // ---------- DEFINE FUNCTIONS DULU ----------
+    const contactModal = document.getElementById('contactModal');
+    const contactModalClose = document.getElementById('contactModalClose');
+
+    function closeContactModal() {
+      contactModal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Function untuk show notification
+    function showNotification() {
+      const toast = document.getElementById('notificationToast');
+      toast.classList.add('show');
+      
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 4000);
+    }
+
+    // Tunggu EmailJS library loaded sebelum setup form
+    function setupContactFormHandler() {
+      console.log('[Contact Form] Checking EmailJS...');
+      
+      if (typeof emailjs === 'undefined') {
+        console.log('[Contact Form] EmailJS not ready, retrying...');
+        setTimeout(setupContactFormHandler, 100);
+        return;
+      }
+
+      const contactForm = document.getElementById('contactForm');
+      console.log('[Contact Form] contactForm element:', contactForm);
+      
+      if (!contactForm) {
+        console.error('[Contact Form] Form not found!');
+        return;
+      }
+
+      // HAPUS listener lama jika ada
+      const newContactForm = contactForm.cloneNode(true);
+      contactForm.parentNode.replaceChild(newContactForm, contactForm);
+      
+      // Attach listener ke element baru
+      const formElement = document.getElementById('contactForm');
+      console.log('[Contact Form] Attaching submit listener...');
+      
+      formElement.addEventListener('submit', async (e) => {
+        console.log('[Contact Form] Submit event triggered!');
+        e.preventDefault();
+        console.log('[Contact Form] preventDefault called');
+        
+        const submitBtn = formElement.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Mengirim...';
+        submitBtn.disabled = true;
+
+        try {
+          console.log('[Contact Form] Sending email via EmailJS...');
+          const response = await emailjs.send('gmail_service', 'template_xsrz9o6', {
+            from_name: document.getElementById('contactName').value,
+            from_email: document.getElementById('contactEmail').value,
+            message: document.getElementById('contactMessage').value,
+            reply_to: document.getElementById('contactEmail').value,
+          });
+
+          console.log('[Contact Form] Response:', response);
+          
+          if (response.status === 200) {
+            console.log('[Contact Form] Success! Showing notification...');
+            formElement.reset();
+            closeContactModal();
+            showNotification();
+          }
+        } catch (error) {
+          console.error('[Contact Form] Error:', error);
+          alert('Gagal mengirim pesan. Silakan coba lagi.');
+        } finally {
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }
+      }, true); // Capture phase
+      
+      console.log('[Contact Form] Setup complete!');
+    }
+
+    // Setup form handler saat DOM siap
+    console.log('[Init] Document readyState:', document.readyState);
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupContactFormHandler);
+    } else {
+      setupContactFormHandler();
+    }
+
+    // ---------- CONTACT FORM MODAL ----------
+    const contactLink = document.querySelector('.nav-links a[href="#contact"]');
+
+    if (contactLink) {
+      contactLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        contactModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+
+    // Contact button di section about
+    const contactBtnAbout = document.getElementById('contactBtnAbout');
+    if (contactBtnAbout) {
+      contactBtnAbout.addEventListener('click', (e) => {
+        e.preventDefault();
+        contactModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+
+    contactModalClose.addEventListener('click', closeContactModal);
+    contactModal.addEventListener('click', (e) => { if (e.target === contactModal) closeContactModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeContactModal(); });
 
     // ---------- ACTIVE NAV LINK (scroll spy) ----------
     const sections = document.querySelectorAll('section[id], #hero');
@@ -589,6 +755,7 @@ window.onclick = function(event) {
     <img id="modalImage" src="" alt="Project Preview">
   </div>
 </div>
+
 </body>
 </html>
 

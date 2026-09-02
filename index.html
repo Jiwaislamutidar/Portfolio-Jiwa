@@ -194,9 +194,15 @@
         <h2 class="section-title">Project</h2>
       </div>
 
+      <div class="tabs" role="tablist" style="margin-bottom:1.5rem;">
+        <button class="tab-btn active" data-filter="all" role="tab" aria-selected="true">Semua</button>
+        <button class="tab-btn" data-filter="real" role="tab" aria-selected="false">Real Project</button>
+        <button class="tab-btn" data-filter="mini" role="tab" aria-selected="false">Mini Project</button>
+      </div>
+
       <div class="grid-projects">
         <!-- Proyek 1 -->
-        <article class="project-card reveal">
+        <article class="project-card reveal" data-category="real">
           <div class="thumb"><img src="images/himtif.png" alt="Web HIMTIF Unpam" loading="lazy"></div>
           <div class="body">
             <p class="meta">Organisasi · Web Platform</p>
@@ -210,7 +216,7 @@
         </article>
 
         <!-- Proyek 2 -->
-        <article class="project-card reveal">
+        <article class="project-card reveal" data-category="real">
           <div class="thumb"><img src="images/training.png" alt="Web Training Center" loading="lazy"></div>
           <div class="body">
             <p class="meta">Aplikasi Web</p>
@@ -224,7 +230,7 @@
         </article>
 
         <!-- Proyek 3 -->
-        <article class="project-card reveal">
+        <article class="project-card reveal" data-category="mini">
           <div class="thumb"><img src="images/MANAJEMEN DATA.png" alt="Manajemen Data" loading="lazy"></div>
           <div class="body">
             <p class="meta">Sistem Informasi · CRUD</p>
@@ -238,7 +244,7 @@
         </article>
 
         <!-- Proyek 4 -->
-        <article class="project-card reveal">
+        <article class="project-card reveal" data-category="mini">
           <div class="thumb"><img src="images/manajemen kost.png" alt="Manajemen Kost" loading="lazy"></div>
           <div class="body">
             <p class="meta">Sistem Informasi</p>
@@ -252,7 +258,7 @@
         </article>
 
         <!-- Proyek 5 -->
-        <article class="project-card reveal">
+        <article class="project-card reveal" data-category="mini">
           <div class="thumb"><img src="images/manajemen keuangan.png" alt="Pencatatan Uang" loading="lazy"></div>
           <div class="body">
             <p class="meta">Aplikasi Web</p>
@@ -266,7 +272,7 @@
         </article>
 
         <!-- Proyek 6 -->
-        <article class="project-card reveal">
+        <article class="project-card reveal" data-category="mini">
           <div class="thumb"><img src="images/portofolio.png" alt="Portfolio Web" loading="lazy"></div>
           <div class="body">
             <p class="meta">Portfolio</p>
@@ -279,8 +285,8 @@
           </div>
         </article>
 
-        <!-- proyek 7-->>
-        <article class="project-card reveal">
+        <!-- proyek 7-->
+        <article class="project-card reveal" data-category="mini">
           <div class="thumb"><img src="images/aspirasi.png" alt="Portfolio Web" loading="lazy"></div>
           <div class="body">
             <p class="meta">e-aspirasi</p>
@@ -699,8 +705,29 @@
     }, { threshold: 0.08 });
     document.querySelectorAll('.reveal').forEach((el) => revealObs.observe(el));
 
+    // ---------- TABS (Projects Filter) ----------
+    const projectTabBtns = document.querySelectorAll('#projects .tab-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    projectTabBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        projectTabBtns.forEach((b) => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+
+        const filter = btn.dataset.filter;
+        projectCards.forEach((card) => {
+          const match = filter === 'all' || card.dataset.category === filter;
+          card.style.display = match ? '' : 'none';
+        });
+      });
+    });
+
     // ---------- TABS (Certificates) ----------
-    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabBtns = document.querySelectorAll('#certificate .tab-btn');
     tabBtns.forEach((btn) => {
       btn.addEventListener('click', () => {
         tabBtns.forEach((b) => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
@@ -758,4 +785,3 @@ window.onclick = function(event) {
 
 </body>
 </html>
-
